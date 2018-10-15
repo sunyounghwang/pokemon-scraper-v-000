@@ -13,6 +13,6 @@ class Pokemon
   end
 
   def self.find(id, db)
-    poke_hash = db.query("SELECT * FROM pokemon WHERE id = ?", [id])
+    poke_hash = db.query("SELECT * FROM pokemon WHERE id = ?", [id]).next_hash
   end
 end
