@@ -14,6 +14,5 @@ class Pokemon
     pokemon = ALL.detect { |p| p.name == name && p.type == type }
     sql = db.prepare("INSERT INTO pokemon (id, name, type) values (?, ?, ?)")
     test = sql.execute(pokemon.id, pokemon.name, pokemon.type)
-    binding.pry
   end
 end
