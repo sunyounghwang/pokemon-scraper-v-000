@@ -23,6 +23,5 @@ class Pokemon
 
   def self.find(id, db)
     poke_set = db.query("SELECT * FROM pokemon WHERE id = ?", [id])
-    new()
   end
 end
