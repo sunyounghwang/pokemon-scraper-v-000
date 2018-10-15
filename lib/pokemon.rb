@@ -1,5 +1,4 @@
 class Pokemon
-
   def initialize(id:, name:, type:, db:)
     @id = id
     @name = name
@@ -8,6 +7,6 @@ class Pokemon
   end
 
   def self.save(name:, type:, db:)
-  
+
   end
 end
