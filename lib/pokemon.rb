@@ -1,6 +1,6 @@
 class Pokemon
-  attr_accessor :id, :name, :type, :db
   ALL = []
+  attr_accessor :id, :name, :type, :db
 
   def initialize(id:, name:, type:, db:)
     @id = id
@@ -11,6 +11,6 @@ class Pokemon
   end
 
   def self.save(name:, type:, db:)
-
+    ALL.detect
   end
 end
