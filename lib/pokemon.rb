@@ -12,7 +12,7 @@ class Pokemon
 
   def self.save(name, type, db)
     p = ALL.detect { |p| p.name == name && p.type == type }
-    db.prepare("INSERT INTO pokemon (id, name, type) values (?, ?, ?)").execute(p.id, p.name, p.type)
+    db.query("INSERT INTO pokemon (id, name, type) values (?, ?, ?)", [p.id, p.name, p.type])
   end
 
   def self.find(id, db)
