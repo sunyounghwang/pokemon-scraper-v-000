@@ -11,6 +11,7 @@ class Pokemon
   end
 
   def self.save(name:, type:, db:)
+    binding.pry
     ALL.detect {|pokemon|}
   end
 end
