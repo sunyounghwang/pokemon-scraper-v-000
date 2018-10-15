@@ -9,6 +9,6 @@ class Pokemon
   end
 
   def save(:name, :type, :db)
-    Pokemon.new(id, type, )
+    Pokemon.new(name, type, db)
   end
 end
