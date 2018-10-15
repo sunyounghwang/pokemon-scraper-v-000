@@ -13,6 +13,6 @@ class Pokemon
   def self.save(name, type, db)
     pokemon = ALL.detect { |p| p.name == name && p.type == type }
     sql = db.prepare("INSERT INTO pokemon (id, name, type) values (?, ?, ?)")
-    sql.execute()
+    sql.execute("test")
   end
 end
