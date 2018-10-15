@@ -11,12 +11,12 @@ class Pokemon
   end
 
   def self.save(name, type, db)
-    p = ALL.detect { |p| p.name == name && p.type == type }
-    db.query("INSERT INTO pokemon (id, name, type) values (?, ?, ?)", [p.id, p.name, p.type])
+    poke = ALL.detect { |p| p.name == name && p.type == type }
+    db.query("INSERT INTO pokemon (id, name, type) values (?, ?, ?)", [poke.id, poke.name, poke.type])
   end
 
   def self.find(id, db)
-    result = db.query("SELECT * FROM pokemon WHERE id = ?", [id])
-    binding.pry
+    poke = db.query("SELECT * FROM pokemon WHERE id = ?", [id])
+
   end
 end
