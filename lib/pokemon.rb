@@ -17,7 +17,6 @@ class Pokemon
 
   def self.find(id, db)
     poke_set = db.query("SELECT * FROM pokemon WHERE id = ?", [id])
-    attr_array = poke_set.next
     binding.pry
   end
 end
