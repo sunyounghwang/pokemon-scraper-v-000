@@ -12,6 +12,6 @@ class Pokemon
 
   def self.save(name, type, db)
     pokemon = ALL.detect { |p| p.name == name && p.type == type }
-    binding.pry
+    db.execute("INSERT INTO pokemon (id, name, type) VALUES (#{p.id}, #{p.name}, #{p.type})")
   end
 end
