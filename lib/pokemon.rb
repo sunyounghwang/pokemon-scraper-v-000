@@ -14,4 +14,7 @@ class Pokemon
     p = ALL.detect { |p| p.name == name && p.type == type }
     db.prepare("INSERT INTO pokemon (id, name, type) values (?, ?, ?)").execute(p.id, p.name, p.type)
   end
+
+  def self.find(id, db)
+  end
 end
