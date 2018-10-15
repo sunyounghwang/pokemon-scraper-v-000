@@ -2,12 +2,17 @@ class Pokemon
   attr_accessor :id, :name, :type, :db
   ALL = []
 
-  def initialize(id:, name:, type:, db:)
+=begindef initialize(id:, name:, type:, db:)
     @id = id
     @name = name
     @type = type
     @db = db
     ALL << self
+  end
+=end
+
+  def initialize(attributes)
+    attributes.each { |key, value| send("#{key}=", value) }
   end
 
   def self.save(name, type, db)
@@ -17,6 +22,6 @@ class Pokemon
 
   def self.find(id, db)
     poke_set = db.query("SELECT * FROM pokemon WHERE id = ?", [id])
-    binding.pry
+    new()
   end
 end
