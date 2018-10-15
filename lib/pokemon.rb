@@ -13,6 +13,7 @@ class Pokemon
 
   def initialize(attributes)
     attributes.each { |attribute, value| send("#{attribute}=", value) }
+    ALL << self
   end
 
   def self.save(name, type, db)
