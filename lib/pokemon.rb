@@ -8,6 +8,7 @@ class Pokemon
     @db = db
   end
 
-  def save(:id, :type, :db)
+  def save(:name, :type, :db)
+    Pokemon.new(id, type, )
   end
 end
