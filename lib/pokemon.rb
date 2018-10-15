@@ -11,6 +11,6 @@ class Pokemon
   end
 
   def self.save(name:, type:, db:)
-    ALL.detect
+    ALL.detect {|pokemon|}
   end
 end
