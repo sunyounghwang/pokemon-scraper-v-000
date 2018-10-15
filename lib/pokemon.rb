@@ -16,7 +16,7 @@ class Pokemon
   end
 
   def self.find(id, db)
-    poke = db.query("SELECT * FROM pokemon WHERE id = ?", [id])
+    poke_set = db.query("SELECT * FROM pokemon WHERE id = ?", [id])
     binding.pry
   end
 end
