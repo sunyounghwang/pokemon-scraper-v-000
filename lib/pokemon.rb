@@ -11,6 +11,7 @@ class Pokemon
   end
 
   def self.save(name:, type:, db:)
-    pokemon = ALL.detect {|p| p.name == name && p.type == type}
+    pokemon = ALL.detect { |p| p.name == name && p.type == type }
+    binding.pry
   end
 end
