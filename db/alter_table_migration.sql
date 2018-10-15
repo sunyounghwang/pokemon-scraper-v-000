@@ -1,0 +1,2 @@
+def execute_create_hp_column
+end
