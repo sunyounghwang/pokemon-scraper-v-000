@@ -10,7 +10,7 @@ class Pokemon
     ALL << self
   end
 
-  def self.save(name:, type:, db:)
+  def self.save(name, type, db)
     pokemon = ALL.detect { |p| p.name == name && p.type == type }
     binding.pry
   end
